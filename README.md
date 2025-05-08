@@ -1,6 +1,6 @@
 # Bellabeat Case Study: Datenanalyse für zielgerichtetes Marketing  
 **Von Mishel-Ivon Jovanovski**  
-*Junior Data Analyst*  
+*Data Analyst*  
 
 ---
 
