@@ -102,12 +102,6 @@ SELECT CORR(total_minutes_asleep, calories) AS sleep_calories_corr
 FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`;
 Tägliche Aktivitätsmuster (Stundenbasis):
 
-Tägliche Aktivitätsmuster (Stundenbasis):
-SELECT 
-  EXTRACT(HOUR FROM PARSE_TIME('%H:%M:%S', hour)) AS hour_of_day,
-  AVG(total_steps) AS avg_steps
-FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
-GROUP BY hour_of_day
-ORDER BY hour_of_day;
+
 
 
