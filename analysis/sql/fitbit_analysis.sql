@@ -15,4 +15,15 @@ FROM `bellabeat-analysis-459322.fitbit_data.cleaned_data`
 GROUP BY Id
 ORDER BY days_tracked DESC;
 
+2. Aktivitätsanalyse (Fokus: Bellabeat Leaf)
 
+-- Durchschnittliche tägliche Aktivität
+SELECT
+  Id,
+  AVG(total_steps) AS avg_steps,
+  AVG(total_distance) AS avg_distance_km,
+  AVG(calories) AS avg_calories,
+  AVG(very_active_minutes) AS avg_intense_activity
+FROM `bellabeat-analysis-459322.fitbit_data.cleaned_data`
+GROUP BY Id
+ORDER BY avg_steps DESC;
