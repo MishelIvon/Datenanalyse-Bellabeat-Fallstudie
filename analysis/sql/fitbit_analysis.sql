@@ -37,4 +37,20 @@ ORDER BY
     WHEN 'Moderately Active' THEN 3 ELSE 4
   END;
 
+3. Schlafanalyse (Bellabeat Time)
+
+SELECT
+  CASE
+    WHEN total_minutes_asleep/60 < 6 THEN 'Insufficient Sleep'
+    WHEN total_minutes_asleep/60 BETWEEN 6 AND 7 THEN 'Below Average'
+    ELSE 'Healthy Sleep'
+  END AS sleep_category,
+  COUNT(*) AS days_count,
+  AVG(calories) AS avg_calories_burned
+FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
+WHERE total_minutes_asleep IS NOT NULL
+GROUP BY sleep_category;
+
+
+
 
