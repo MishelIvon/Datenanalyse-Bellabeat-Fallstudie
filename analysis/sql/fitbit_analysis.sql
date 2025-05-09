@@ -81,5 +81,17 @@ ORDER BY
     ELSE 7 
   END;
 
+B. SQL für Zielgruppe
+
+-- Nutzer mit schlechtem Schlaf UND geringer Aktivität
+SELECT
+  id,
+  AVG(total_minutes_asleep)/60 AS avg_sleep,
+  AVG(total_steps) AS avg_steps
+FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
+WHERE 
+  total_minutes_asleep/60 < 7 
+  AND total_steps < 5000
+GROUP BY id;
 
 
