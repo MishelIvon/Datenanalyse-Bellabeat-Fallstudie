@@ -18,4 +18,23 @@ SELECT
   SAFE_CAST(REGEXP_REPLACE(avg_heartrate, '[^0-9.]', '') AS FLOAT64) AS avg_heartrate
 FROM `bellabeat-analysis-459322.fitbit_data.cleaned_data`;
 
+2. Aktivitätslevel-Analyse (Bellabeat Leaf)
+
+SELECT
+  CASE
+    WHEN total_steps < 5000 THEN 'Sedentary'
+    WHEN total_steps BETWEEN 5000 AND 7499 THEN 'Low Active'
+    WHEN total_steps BETWEEN 7500 AND 9999 THEN 'Moderately Active'
+    ELSE 'Highly Active'
+  END AS activity_level,
+  COUNT(*) AS days_count,
+  ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`), 2) AS percentage
+FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
+GROUP BY activity_level
+ORDER BY 
+  CASE activity_level
+    WHEN 'Sedentary' THEN 1 WHEN 'Low Active' THEN 2 
+    WHEN 'Moderately Active' THEN 3 ELSE 4
+  END;
+
 
