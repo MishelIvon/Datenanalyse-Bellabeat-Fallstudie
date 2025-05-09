@@ -1,3 +1,5 @@
+1. Datenexploration und Qualitätsprüfung
+
 -- Prüfe die Zeitspanne der Daten
 SELECT 
   MIN(activity_date) AS start_date,
