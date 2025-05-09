@@ -65,5 +65,21 @@ FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
 WHERE avg_heartrate IS NOT NULL
 GROUP BY heart_rate_zone;
 
+5. Wochentags-Trends
+
+SELECT
+  weekday,
+  AVG(total_steps) AS avg_steps,
+  AVG(total_minutes_asleep)/60 AS avg_sleep_hours
+FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
+GROUP BY weekday
+ORDER BY 
+  CASE weekday
+    WHEN 'Monday' THEN 1 WHEN 'Tuesday' THEN 2 
+    WHEN 'Wednesday' THEN 3 WHEN 'Thursday' THEN 4 
+    WHEN 'Friday' THEN 5 WHEN 'Saturday' THEN 6 
+    ELSE 7 
+  END;
+
 
 
