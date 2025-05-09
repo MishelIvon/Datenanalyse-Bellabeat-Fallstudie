@@ -51,6 +51,19 @@ FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
 WHERE total_minutes_asleep IS NOT NULL
 GROUP BY sleep_category;
 
+4. Herzfrequenz & Stress (Bellabeat App)
+
+SELECT
+  CASE
+    WHEN avg_heartrate < 60 THEN 'Low (Resting)'
+    WHEN avg_heartrate BETWEEN 60 AND 100 THEN 'Normal'
+    ELSE 'Elevated (Stress)'
+  END AS heart_rate_zone,
+  AVG(total_minutes_asleep)/60 AS avg_sleep_hours,
+  AVG(sedentary_minutes)/60 AS avg_sedentary_hours
+FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
+WHERE avg_heartrate IS NOT NULL
+GROUP BY heart_rate_zone;
 
 
 
