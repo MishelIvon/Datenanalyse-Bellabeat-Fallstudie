@@ -47,3 +47,16 @@ ORDER BY
     WHEN 'Moderately Active' THEN 3
     ELSE 4
   END;
+
+3. Schlafanalyse für Bellabeat Time (Schlaf-Tracking)
+
+-- Durchschnittliche Schlafdauer pro Nutzer
+SELECT
+  Id,
+  AVG(total_minutes_asleep) / 60 AS avg_hours_asleep,
+  AVG(TotalTimeInBed) / 60 AS avg_hours_in_bed,
+  AVG(TotalTimeInBed - total_minutes_asleep) AS avg_minutes_awake
+FROM `bellabeat-analysis-459322.fitbit_data.cleaned_data_v2`
+WHERE total_minutes_asleep IS NOT NULL
+GROUP BY Id
+ORDER BY avg_hours_asleep DESC;
