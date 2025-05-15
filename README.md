@@ -8,7 +8,7 @@
 Bellabeat ist ein Hersteller von smarten Wellness-Produkten für Frauen. In dieser Fallstudie habe ich **Fitbit-Daten** analysiert, um Nutzungsmuster zu identifizieren und Marketingstrategien für den **Leaf-Tracker** abzuleiten – ein Armband, das Schlaf, Aktivität und Stress trackt.  
 
 **Ziel:**  
-- Ableitung von **3 Marketingempfehlungen** für berufstätige Frauen.  
+- Verhaltensmuster bei der Nutzung von Wearables erkennen, um daraus gezielte Maßnahmen für Produktverbesserung und Marketing in der Gesundheits und Wellnessbranche abzuleiten.  
 
 ---
 
