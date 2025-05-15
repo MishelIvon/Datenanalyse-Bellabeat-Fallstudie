@@ -24,7 +24,7 @@ Bellabeat ist ein Hersteller von smarten Wellness-Produkten für Frauen. In dies
 2. **[Prepare: Daten vorbereiten](2-prepare.md)**  
 3. **[Process: Daten bereinigen](3-process.md)**  
 4. **[Analyze: Trends identifizieren](4-analyze.md)**  
-5. **[Share: Visualisierungen erstellen](5-share.md)**  
+5. **[Share: Visualisierungen](5-share.md)**  
 6. **[Act: Empfehlungen ableiten](6-act.md)**  
 
 
