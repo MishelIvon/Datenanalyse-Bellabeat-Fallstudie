@@ -81,7 +81,7 @@ ORDER BY
     ELSE 7 
   END;
 
-B. SQL für Zielgruppe
+6. SQL für Zielgruppe
 
 -- Nutzer mit schlechtem Schlaf UND geringer Aktivität
 SELECT
@@ -94,13 +94,13 @@ WHERE
   AND total_steps < 5000
 GROUP BY id;
 
-C. Vertiefende Analysen
+7. Vertiefende Analysen
 
 Korrelation zwischen Schlaf und Kalorienverbrauch:
 
 SELECT CORR(total_minutes_asleep, calories) AS sleep_calories_corr
 FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`;
-Tägliche Aktivitätsmuster (Stundenbasis):
+
 
 
 
