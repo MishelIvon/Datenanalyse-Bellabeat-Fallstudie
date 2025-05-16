@@ -1,4 +1,4 @@
-## Phase 3: Process – Daten bereinigen  
+## Phase 3: Datenbereinigung in R
 🧹 **Bereinigungsschritte**  
 
 1. **Ausreißer entfernen:**  
