@@ -1,4 +1,4 @@
-## Phase 1: Ask – Geschäftsauftrag definieren
+## Phase 1: Geschäftsauftrag & Fragestellung
 
 ### 📋 Business Task  
 Ziel dieses Projekts ist es, die Fitbit-Nutzungsdaten zu analysieren, um Muster in den Bereichen Aktivität, Schlaf und Stress zu erkennen.  
