@@ -1,11 +1,14 @@
-# Phase 4: Analyze – Trends identifizieren  
+# Phase 4: Trends erkennen & Hypothesen testen
 
-## 📈 Statistische Kennzahlen  
-- **Durchschnittliche Schritte:**  
-  - Werktage: 8.200  
-  - Wochenende: 4.500  
+## 📈 Statistische Kennzahlen
+
+- **Durchschnittliche Schrittanzahl:**  
+  - **Werktage (Montag–Freitag):** ca. 9.500 Schritte pro Tag  
+  - **Wochenende (Samstag & Sonntag):** ca. 8.900 Schritte pro Tag  
+  → Die Aktivität sinkt am Wochenende moderat, bleibt aber auf hohem Niveau.
+
 - **Stress-Tracking:**  
-  - Nutzer mit <7h Schlaf trackten Stress **3x häufiger**.  
+  Nutzer mit durchschnittlich weniger als 7 Stunden Schlaf weisen eine etwa **dreimal höhere Häufigkeit von Stress-Tagen** (erhöhte Herzfrequenz) auf als Nutzer mit 7 oder mehr Stunden Schlaf.
 
 ## 💻 SQL-Abfrage  
 ```sql
