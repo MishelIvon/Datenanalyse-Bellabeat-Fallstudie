@@ -48,9 +48,9 @@ Ziel dieser Analyse ist es, auf Basis von Fitbit-Daten Verhaltensmuster in den B
 ## 💡 Empfehlungen für Bellabeat
 
 - **Wochenend-Kampagnen** – Nutze die erhöhte Aktivität am Wochenende für gezielte Aktionen.  
-- **Reminder-Funktion** – Automatische Push-Benachrichtigungen an schwächeren Tagen.  
-- **Schlaf-Feature promoten** – Hebe die Schlaf­tracking-Vorteile stärker hervor.  
-- **Stressmanagement integrieren** – Biete in der App kurze Atem- und Achtsamkeitsübungen an.  
-- **Gamification & Personalisierung** – Belohnungen für Aktivitäts- und Schlafziele; individuelle Challenges.  
+- **Reminder-Funktion** – Automatische Push Benachrichtigungen an schwächeren Tagen.  
+- **Schlaf-Feature promoten** – Hebe die Schlaf­tracking Vorteile stärker hervor.  
+- **Stressmanagement integrieren** – Biete in der App kurze Atem und Achtsamkeitsübungen an.  
+- **Gamification & Personalisierung** – Belohnungen für Aktivitäts und Schlafziele; individuelle Challenges.  
 
 
