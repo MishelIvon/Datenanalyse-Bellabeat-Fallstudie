@@ -1,4 +1,4 @@
-# Phase 2: Prepare – Daten vorbereiten
+# Phase 2: Datensichtung & -verständnis
 
 ## 📊 Datenquelle  
 Die Analyse basiert auf öffentlich zugänglichen Daten von Kaggle:  
