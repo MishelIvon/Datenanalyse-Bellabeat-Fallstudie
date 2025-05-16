@@ -1,4 +1,4 @@
-## 🎯 Empfehlungen für Bellabeat 
+## 🎯 Konkrete Handlungsempfehlungen
 
 
 
