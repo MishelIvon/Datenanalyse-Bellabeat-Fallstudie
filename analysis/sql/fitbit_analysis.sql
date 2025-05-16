@@ -1,5 +1,4 @@
-1. Tabelle mit korrigierten Datentypen erstellen (direkt aus cleaned_data)
-
+-- 1. Tabelle mit korrigierten Datentypen erstellen (aus cleaned_data)
 CREATE OR REPLACE TABLE `bellabeat-analysis-459322.fitbit_data.final_analysis` AS
 SELECT
   id,
@@ -12,14 +11,13 @@ SELECT
   fairly_active_minutes,
   very_active_minutes,
   weekday,
-  -- Konvertiere total_minutes_asleep zu FLOAT64
+  -- total_minutes_asleep als Zahl konvertieren (FLOAT64)
   SAFE_CAST(REGEXP_REPLACE(total_minutes_asleep, '[^0-9.]', '') AS FLOAT64) AS total_minutes_asleep,
-  -- Konvertiere avg_heartrate zu FLOAT64
+  -- avg_heartrate als Zahl konvertieren (FLOAT64)
   SAFE_CAST(REGEXP_REPLACE(avg_heartrate, '[^0-9.]', '') AS FLOAT64) AS avg_heartrate
 FROM `bellabeat-analysis-459322.fitbit_data.cleaned_data`;
 
-2. Aktivitätslevel-Analyse (Bellabeat Leaf)
-
+-- 2. Aktivitätslevel-Analyse (Bellabeat Leaf)
 SELECT
   CASE
     WHEN total_steps < 5000 THEN 'Sedentary'
@@ -37,8 +35,7 @@ ORDER BY
     WHEN 'Moderately Active' THEN 3 ELSE 4
   END;
 
-3. Schlafanalyse (Bellabeat Time)
-
+-- 3. Schlafanalyse (Bellabeat Time)
 SELECT
   CASE
     WHEN total_minutes_asleep/60 < 6 THEN 'Insufficient Sleep'
@@ -51,8 +48,7 @@ FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
 WHERE total_minutes_asleep IS NOT NULL
 GROUP BY sleep_category;
 
-4. Herzfrequenz & Stress (Bellabeat App)
-
+-- 4. Herzfrequenz & Stress (Bellabeat App)
 SELECT
   CASE
     WHEN avg_heartrate < 60 THEN 'Low (Resting)'
@@ -65,8 +61,7 @@ FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`
 WHERE avg_heartrate IS NOT NULL
 GROUP BY heart_rate_zone;
 
-5. Wochentags-Trends
-
+-- 5. Wochentags-Trends
 SELECT
   weekday,
   AVG(total_steps) AS avg_steps,
@@ -81,9 +76,7 @@ ORDER BY
     ELSE 7 
   END;
 
-6. SQL für Zielgruppe
-
--- Nutzer mit schlechtem Schlaf UND geringer Aktivität
+-- 6. Zielgruppenanalyse: Nutzer mit schlechtem Schlaf UND geringer Aktivität
 SELECT
   id,
   AVG(total_minutes_asleep)/60 AS avg_sleep,
@@ -94,14 +87,6 @@ WHERE
   AND total_steps < 5000
 GROUP BY id;
 
-7. Vertiefende Analysen
-
-Korrelation zwischen Schlaf und Kalorienverbrauch:
-
+-- 7. Vertiefende Analyse: Korrelation zwischen Schlaf und Kalorienverbrauch
 SELECT CORR(total_minutes_asleep, calories) AS sleep_calories_corr
 FROM `bellabeat-analysis-459322.fitbit_data.final_analysis`;
-
-
-
-
-
